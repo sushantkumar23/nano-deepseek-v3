@@ -215,7 +215,7 @@ torch.set_float32_matmul_precision("high")
 # create model
 # model = GPT.from_pretrained("gpt2") # or init from OpenAI GPT-2
 model = DeepSeekV3(
-    DeepSeekV3Args(vocab_size=50304, n_layer=12, n_head=12, n_embd=768)
+    ModelArgs(vocab_size=50304, n_layers=12, n_heads=12, dim=768)
 )  # 124M params
 
 model = model.to(device).bfloat16()
